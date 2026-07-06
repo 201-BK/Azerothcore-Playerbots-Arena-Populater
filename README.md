@@ -69,6 +69,11 @@ you have the more success you are going to have I believe.
 ## Setup
 
 1. Clone this repo and install dependencies:
+   
+   On windows you can right-click inside the folder
+   where all the files are and click "Open in terminal"
+   Then do the following:
+   
    ```
    npm install
    ```
