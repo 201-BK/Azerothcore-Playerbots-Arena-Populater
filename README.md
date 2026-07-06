@@ -122,3 +122,11 @@ at the time as I had just wiped the teams clean)
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+##
+
+This tool was made for people who wants to play rated arenas against bots
+and searching "Azerothcore Playersbots Arenas not working" or similar
+gave you no viable solutions. 
+
+Hope this helps you :)
