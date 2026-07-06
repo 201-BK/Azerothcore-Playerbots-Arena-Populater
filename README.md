@@ -97,6 +97,9 @@ insensitively, so `RNDBOT33`, `rndbot1`, etc. all match. If your bot
 accounts use a different prefix, change `BOT_ACCOUNT_PREFIX` in `.env`.
 Uncheck the box to include everyone.
 
+(I have not 100% tested this option yet as no players were in an arena team
+at the time as I had just wiped the teams clean)
+
 ## Notes
 
 - This only touches `arena_team` and `arena_team_member` (and reads from
