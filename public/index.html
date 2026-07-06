@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arena Ledger — AzerothCore</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="ledger-header">
+    <div class="crest">⚔</div>
+    <div>
+      <h1>Arena Ledger</h1>
+      <p class="subtitle">Muster fresh arena teams from your unassigned level 80s</p>
+    </div>
+    <nav class="top-nav"><a href="ladder.html">View Ladder →</a></nav>
+  </header>
+
+  <main>
+    <section class="panel" id="summary-panel">
+      <h2>Standing Roster</h2>
+      <p class="hint">Level 80 characters not yet on a team, by bracket &amp; faction.</p>
+      <div id="summary-grid" class="summary-grid"></div>
+
+      <label class="bots-toggle">
+        <input type="checkbox" id="bots-only" checked />
+        Only include playerbots (accounts starting with "rndbot")
+      </label>
+
+      <label class="bots-toggle">
+        <input type="checkbox" id="spread-ratings" />
+        Spread starting ratings evenly across 0–2000 (instead of all starting at 0)
+      </label>
+
+      <button id="fill-btn" class="fill-button">Fill the Server with Arena Teams</button>
+      <p id="fill-status" class="fill-status"></p>
+    </section>
+
+    <section class="panel">
+      <div class="teams-header">
+        <h2>Arena Teams</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-bracket="all">All</button>
+          <button class="filter-btn" data-bracket="2v2">2v2</button>
+          <button class="filter-btn" data-bracket="3v3">3v3</button>
+          <button class="filter-btn" data-bracket="5v5">5v5</button>
+        </div>
+      </div>
+      <div id="teams-grid" class="teams-grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

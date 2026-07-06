@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ladder — AzerothCore</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="ledger-header">
+    <div class="crest">🏆</div>
+    <div>
+      <h1>Arena Ladder</h1>
+      <p class="subtitle">Top players and top teams, ranked by rating</p>
+    </div>
+    <nav class="top-nav"><a href="index.html">← Back to Ledger</a></nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Top 5 Players</h2>
+      <p class="hint">Ranked by personal rating.</p>
+      <div id="top-players" class="ladder-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Top 5 Teams</h2>
+      <p class="hint">Ranked by team rating.</p>
+      <div id="top-teams" class="ladder-list"></div>
+    </section>
+  </main>
+
+  <script src="ladder.js"></script>
+</body>
+</html>

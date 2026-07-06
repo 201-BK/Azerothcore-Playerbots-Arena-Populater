@@ -1,0 +1,16 @@
+{
+  "name": "azerothcore-arena-ladder",
+  "version": "1.0.0",
+  "description": "Fills an AzerothCore + mod-playerbots server with fresh arena teams from eligible level 80 characters.",
+  "main": "server.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "dotenv": "^16.4.5"
+  }
+}
