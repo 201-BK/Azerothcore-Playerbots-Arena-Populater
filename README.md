@@ -33,6 +33,39 @@ frankly quite tedious so I had this tool made to fix it.
 - Shows every team and its members/ratings, plus a ladder page with the
   top 5 players and top 5 teams.
 
+## Preparation:
+
+In preparation of using this tool I had the server start with 
+```
+AiPlayerbot.DeleteRandomBotArenaTeams = 1
+```
+in playerbots.conf, then I went inside the database and cleaned up any remaining teams
+that were left behind by that process by deleting the rows.
+
+then after setting the setting back to 0 I start and shut the server down once.
+
+In my playerbots.conf I have set my bots to 
+```
+AiPlayerbot.MinRandomBots = 2000
+AiPlayerbot.MaxRandomBots = 2000
+```
+and 
+
+```
+AiPlayerbot.RandomBotAutoJoinArenaBracket = 14
+
+AiPlayerbot.RandomBotAutoJoinBGRatedArena2v2Count = 40
+AiPlayerbot.RandomBotAutoJoinBGRatedArena3v3Count = 30
+AiPlayerbot.RandomBotAutoJoinBGRatedArena5v5Count = 20
+
+AiPlayerbot.RandomBotArenaTeam2v2Count = 40
+AiPlayerbot.RandomBotArenaTeam3v3Count = 30
+AiPlayerbot.RandomBotArenaTeam5v5Count = 20
+```
+You should adjust these to what you want, but the more bots
+you have the more success you are going to have I believe.
+(Just don't overdo it, find a good balance :) )
+
 ## Setup
 
 1. Clone this repo and install dependencies:
