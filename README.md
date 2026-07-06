@@ -78,32 +78,25 @@ you have the more success you are going to have I believe.
    npm install
    ```
 2. Make a .env.example file and add then edit it in your
-   editor of choice, fill it with:
+   editor of choice, fill it with the following and update with
+   your login data if you have changed it:
    ```
-# Default AzerothCore + mod-playerbots settings — matches the standard
-# values in worldserver.conf.dist / dbimport for a typical single-machine
-# install. Edit these only if your setup differs.
+   CHAR_DB_HOST=127.0.0.1
+   CHAR_DB_PORT=3306
+   CHAR_DB_USER=acore
+   CHAR_DB_PASSWORD=acore
+   CHAR_DB_NAME=acore_characters
 
-CHAR_DB_HOST=127.0.0.1
-CHAR_DB_PORT=3306
-CHAR_DB_USER=acore
-CHAR_DB_PASSWORD=acore
-CHAR_DB_NAME=acore_characters
+   LOGIN_DB_NAME=acore_auth
+   BOT_ACCOUNT_PREFIX=RNDBOT
 
-# Login/account DB — used to tell playerbots (rndbot% accounts) apart from
-# real players. Must be reachable from the same MySQL server as above.
-LOGIN_DB_NAME=acore_auth
-BOT_ACCOUNT_PREFIX=RNDBOT
+   PLAYERBOTS_DB_HOST=127.0.0.1
+   PLAYERBOTS_DB_PORT=3306
+   PLAYERBOTS_DB_USER=acore
+   PLAYERBOTS_DB_PASSWORD=acore
+   PLAYERBOTS_DB_NAME=acore_playerbots
 
-# Not queried by the current features, but present for anyone extending
-# this to use playerbot-specific data.
-PLAYERBOTS_DB_HOST=127.0.0.1
-PLAYERBOTS_DB_PORT=3306
-PLAYERBOTS_DB_USER=acore
-PLAYERBOTS_DB_PASSWORD=acore
-PLAYERBOTS_DB_NAME=acore_playerbots
-
-PORT=3000
+   PORT=3000
    ```
    Copy the env template:
    ```
