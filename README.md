@@ -77,13 +77,38 @@ you have the more success you are going to have I believe.
    ```
    npm install
    ```
-2. Copy the env template:
+2. Make a .env.example file and add then edit it in your
+   editor of choice, fill it with:
+   ```
+# Default AzerothCore + mod-playerbots settings — matches the standard
+# values in worldserver.conf.dist / dbimport for a typical single-machine
+# install. Edit these only if your setup differs.
+
+CHAR_DB_HOST=127.0.0.1
+CHAR_DB_PORT=3306
+CHAR_DB_USER=acore
+CHAR_DB_PASSWORD=acore
+CHAR_DB_NAME=acore_characters
+
+# Login/account DB — used to tell playerbots (rndbot% accounts) apart from
+# real players. Must be reachable from the same MySQL server as above.
+LOGIN_DB_NAME=acore_auth
+BOT_ACCOUNT_PREFIX=RNDBOT
+
+# Not queried by the current features, but present for anyone extending
+# this to use playerbot-specific data.
+PLAYERBOTS_DB_HOST=127.0.0.1
+PLAYERBOTS_DB_PORT=3306
+PLAYERBOTS_DB_USER=acore
+PLAYERBOTS_DB_PASSWORD=acore
+PLAYERBOTS_DB_NAME=acore_playerbots
+
+PORT=3000
+   ```
+   Copy the env template:
    ```
    cp .env.example .env
    ```
-   The defaults match a standard AzerothCore install (`127.0.0.1`, user
-   `acore`, password `acore`). Only change these if your `worldserver.conf`
-   uses something different.
 3. **Stop your worldserver before running a fill.** 
    Fill, then start the worldserver afterward.
 4. Start the tool:
@@ -93,6 +118,11 @@ you have the more success you are going to have I believe.
 5. Open `http://localhost:3000`. It doesn't need to run on the same
    machine as the database — it just needs network access to your MySQL
    server on port 3306.
+
+If you do not have a .env.example file simply make one in the same
+folder as README.md and put the following inside it:
+
+
 
 ## Bots vs. real players
 
