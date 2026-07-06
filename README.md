@@ -10,7 +10,7 @@ for some reason they wont join the ranked ones.
 
 After some testing back and forth I realize that the problem is that azerothcore
 creates teams for you that just don't seem to work the way that it should and I constantly
-see "Not enough teammembers" when they are trying to join the arena.
+see "Not enough members" when they are trying to join the arena.
 
 So I decided that what needs to happen is to populate all the teams manually, but that is
 frankly quite tedious so I had this tool made to fix it.
