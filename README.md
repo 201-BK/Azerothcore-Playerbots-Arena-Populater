@@ -98,7 +98,7 @@ you have the more success you are going to have I believe.
 
    PORT=3000
    ```
-   Copy the env template:
+   Back in the terminal copy the env template using this command:
    ```
    cp .env.example .env
    ```
@@ -114,7 +114,6 @@ you have the more success you are going to have I believe.
 
 If you do not have a .env.example file simply make one in the same
 folder as README.md and put the following inside it:
-
 
 
 ## Bots vs. real players
