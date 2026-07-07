@@ -145,7 +145,7 @@ at the time as I had just wiped the teams clean)
 ```
 # Warning: Reinitializing bots completely resets them (command in game: .playerbots rndbot init)
 ```
-  Then delete the arena teams and do this again.
+  Then delete the arena teams and use this tool again.
 
 ## License
 
