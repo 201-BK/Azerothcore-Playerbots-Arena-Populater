@@ -109,7 +109,7 @@ you have the more success you are going to have I believe.
    npm start
    ```
 5. Open `http://localhost:3000`. It doesn't need to run on the same
-   machine as the database — it just needs network access to your MySQL
+   machine as the database, it just needs network access to your MySQL
    server on port 3306.
 
 If you do not have a .env.example file simply make one in the same
@@ -119,7 +119,7 @@ folder as README.md and put the following inside it:
 ## Bots vs. real players
 
 The "only include playerbots" checkbox (on by default) joins against
-`acore_auth.account` and matches `username LIKE 'rndbot%'` — case-
+`acore_auth.account` and matches `username LIKE 'rndbot%'` case-
 insensitively, so `RNDBOT33`, `rndbot1`, etc. all match. If your bot
 accounts use a different prefix, change `BOT_ACCOUNT_PREFIX` in `.env`.
 Uncheck the box to include everyone.
@@ -132,14 +132,19 @@ at the time as I had just wiped the teams clean)
 - This only touches `arena_team` and `arena_team_member` (and reads from
   `characters`/`account`). It doesn't touch guilds, mail, or anything
   else.
-- Safe to run repeatedly — it only picks up characters still unassigned
+- Safe to run repeatedly, it only picks up characters still unassigned
   for a given bracket, so you can re-run it as more bots hit 80.
-- Team cosmetics (banner colors/emblem) are all left at default — easy to
+- Team cosmetics (banner colors/emblem) are all left at default easy to
   randomize later in `server.js` if you want more visual variety.
 - Built and tested against the standard AzerothCore 3.3.5 `arena_team` /
   `arena_team_member` schema. If your fork has customized columns, the
   first fill attempt will throw a clear SQL error rather than silently
-  doing the wrong thing — open an issue with the error if you hit one.
+  doing the wrong thing open an issue with the error if you hit one.
+- Sometimes you need to initialize all the bots, you can do this in-game
+  with a command:
+```
+# Warning: Reinitializing bots completely resets them (command in game: .playerbots rndbot init)
+```
 
 ## License
 
